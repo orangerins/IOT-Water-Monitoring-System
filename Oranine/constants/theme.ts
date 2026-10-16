@@ -1,18 +1,24 @@
-export const COLORS = {
-  primary: '#6D28D9',
-  secondary: '#8B5CF6',
-  light: '#C4B5FD',
 
+export const COLORS = {
+  // Main Oranine lavender theme
+  primary: '#67318A',
+  secondary: '#CDA0F2',
+  light: '#F4EAFB',
+
+  // Basic colors
   white: '#FFFFFF',
   black: '#111111',
 
-  surface: '#F3F4F6',
-  card: '#E5E7EB',
+  // Screen and card backgrounds
+  surface: '#F8F7FA',
+  card: '#FFFFFF',
 
-  text: '#211832',
-  muted: '#6B7280',
+  // Text colors
+  text: '#30243A',
+  muted: '#63586D',
 
-  success: '#16A34A',
-  warning: '#F59E0B',
+  // Water quality status colors
+  success: '#15803D',
+  warning: '#B45309',
   danger: '#DC2626',
 };

@@ -1,12 +1,18 @@
+
 import React, {
   useCallback,
   useState,
 } from 'react';
+
 import {
-  SafeAreaView,
   StatusBar,
   StyleSheet,
 } from 'react-native';
+
+import {
+  SafeAreaProvider,
+  SafeAreaView,
+} from 'react-native-safe-area-context';
 
 import { COLORS } from './constants/theme';
 import { ScreenName } from './types';
@@ -64,14 +70,16 @@ export default function App() {
   };
 
   return (
-    <SafeAreaView style={styles.safeArea}>
-      <StatusBar
-        barStyle="light-content"
-        backgroundColor={COLORS.primary}
-      />
+    <SafeAreaProvider>
+      <SafeAreaView style={styles.safeArea}>
+        <StatusBar
+          barStyle="light-content"
+          backgroundColor={COLORS.primary}
+        />
 
-      {screens[currentScreen]}
-    </SafeAreaView>
+        {screens[currentScreen]}
+      </SafeAreaView>
+    </SafeAreaProvider>
   );
 }
 
